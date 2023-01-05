@@ -30,10 +30,16 @@ def create_By_lang(data: list):
         write_file(f'docs/api/lang/{item["lang"]}/index.json', json.dumps(item, ensure_ascii=False, indent=4))
 
 def create_By_author(data: list):
+    temp = {}
     for item in data:
+        if item['author'] not in temp.keys():
+            temp[item['author']] = [item]
+        else:
+            temp[item['author']].append(item)
+    for key in temp.keys():
         create_dir('docs/api/author')
-        create_dir(f'docs/api/author/{item["author"]}')
-        write_file(f'docs/api/author/{item["author"]}/index.json', json.dumps(item, ensure_ascii=False, indent=4))
+        create_dir(f'docs/api/author/{key}')
+        write_file(f'docs/api/author/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
 
 
 def create_By_category(data: list):
