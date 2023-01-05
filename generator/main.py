@@ -35,10 +35,16 @@ def create_By_Id(data: list):
         write_file(f'docs/api/joke/id/{item["id"]}/index.json', json.dumps(item, ensure_ascii=False, indent=4))
 
 def create_By_lang(data: list):
+    temp = {}
     for item in data:
+        if item['lang'] not in temp.keys():
+            temp[item['lang']] = [item]
+        else:
+            temp[item['lang']].append(item)
+    for key in temp.keys():
         create_dir('docs/api/joke/lang')
-        create_dir(f'docs/api/joke/lang/{item["lang"]}')
-        write_file(f'docs/api/joke/lang/{item["lang"]}/index.json', json.dumps(item, ensure_ascii=False, indent=4))
+        create_dir(f'docs/api/joke/lang/{key}')
+        write_file(f'docs/api/joke/lang/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
 
 def create_By_author(data: list):
     temp = {}
