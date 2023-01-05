@@ -1,16 +1,9 @@
 [
     {
         "lang": "fr",
-        "title": "title of joke",
-        "content": "content of joke",
-        "author": "author of joke",
+        "title": "Jonathan",
+        "content": "Qu'est ce qui est jaune et qui attend ?\n\nJonathan",
+        "author": "tot0p",
         "id": 0
-    },
-    {
-        "lang": "en",
-        "title": "title of joke",
-        "content": "content of joke",
-        "author": "author of joke",
-        "id": 1
     }
 ]
