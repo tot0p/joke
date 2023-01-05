@@ -14,5 +14,29 @@
         "author": "tot0p",
         "category": "general,question",
         "id": 1
+    },
+    {
+        "lang": "fr",
+        "title": "resolution",
+        "content": "Quelle est la résolution d'un homme qui a bu trop d'alcool ?\n\nIl ne se souvient plus",
+        "author": "tot0p",
+        "category": "general,question,alcool",
+        "id": 4
+    },
+    {
+        "lang": "fr",
+        "title": "resolution",
+        "content": "T'as pris quoi comme résolution pour cette nouvelle année ?\n\n1080p.",
+        "author": "tot0p",
+        "category": "general,question,informatique,geek,dev",
+        "id": 5
+    },
+    {
+        "lang": "fr",
+        "title": "Zip",
+        "content": "De nos jours, le zip ça devient rar...",
+        "author": "tot0p",
+        "category": "general,question,geek,dev,informatique",
+        "id": 6
     }
 ]
