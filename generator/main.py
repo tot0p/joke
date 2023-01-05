@@ -73,6 +73,21 @@ def create_By_category(data: list):
         write_file(f'docs/api/jokes/category/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
 
 
+def create_by_lang_category(data: list):
+    temp = {}
+    for item in data:
+        if item['lang'] not in temp.keys():
+            temp[item['lang']] = {}
+        if item['category'] not in temp[item['lang']].keys():
+            temp[item['lang']][item['category']] = [item]
+        else:
+            temp[item['lang']][item['category']].append(item)
+    for key in temp.keys():
+        create_dir(f'docs/api/jokes/lang/{key}/category')
+        for key2 in temp[key].keys():
+            create_dir(f'docs/api/jokes/lang/{key}/category/{key2}')
+            write_file(f'docs/api/jokes/lang/{key}/category/{key2}/index.json', json.dumps(temp[key][key2], ensure_ascii=False, indent=4))
+
 if __name__ == '__main__':
     main()
     
