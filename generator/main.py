@@ -1,5 +1,6 @@
 import json
 import os
+from lib import create_dir, write_file
 
 def main():
     with open('data.json', 'r', encoding='utf-8') as f:
@@ -71,14 +72,6 @@ def create_By_category(data: list):
         create_dir(f'docs/api/jokes/category/{key}')
         write_file(f'docs/api/jokes/category/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
 
-def create_dir(dir_name: str):
-    if not os.path.exists(dir_name):
-        os.mkdir(dir_name)
-
-
-def write_file(file_name: str, data: str):
-    with open(file_name, 'w', encoding='utf-8') as f:
-        f.write(data)
 
 if __name__ == '__main__':
     main()
