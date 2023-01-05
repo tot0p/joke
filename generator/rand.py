@@ -9,7 +9,7 @@ from lib import create_dir, write_file
 def main() :
 
     if os.path.exists('docs/api/joke') :
-        with open('docs/api/index.json', 'r', encoding='utf-8') as f :
+        with open('docs/api/jokes/index.json', 'r', encoding='utf-8') as f :
             data = json.load(f)
             create_dir('docs/api/joke/random')
             write_file('docs/api/joke/random/index.json', json.dumps(data[randint(0,len(data)-1)], ensure_ascii=False, indent=4))
