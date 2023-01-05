@@ -2,6 +2,8 @@ import json
 import os
 from lib import create_dir, write_file
 
+import rand
+
 def main():
     with open('data.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -15,6 +17,8 @@ def main():
     create_By_lang(data)
     create_By_author(data)
     create_By_category(data)
+    create_by_lang_category(data)
+    
 
 def rm_dirRecursive(dir_name: str):
     for root, dirs, files in os.walk(dir_name, topdown=False):
@@ -91,6 +95,8 @@ def create_by_lang_category(data: list):
 if __name__ == '__main__':
     main()
     
+
+    rand.main()
     os.system('git config --local user.email "github-actions[bot]@users.noreply.github.com"')
     os.system('git config --local user.name "github-actions[bot]"')
     os.system('git add .')
