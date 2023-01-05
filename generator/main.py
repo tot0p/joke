@@ -67,10 +67,12 @@ def create_By_author(data: list):
 def create_By_category(data: list):
     temp = {}
     for item in data:
-        if item['category'] not in temp.keys():
-            temp[item['category']] = [item]
-        else:
-            temp[item['category']].append(item)
+        t = item['category'].split(',')
+        for i in t:
+            if i not in temp.keys():
+                temp[i] = [item]
+            else:
+                temp[i].append(item)
     for key in temp.keys():
         create_dir('docs/api/jokes/category')
         create_dir(f'docs/api/jokes/category/{key}')
@@ -82,10 +84,12 @@ def create_by_lang_category(data: list):
     for item in data:
         if item['lang'] not in temp.keys():
             temp[item['lang']] = {}
-        if item['category'] not in temp[item['lang']].keys():
-            temp[item['lang']][item['category']] = [item]
-        else:
-            temp[item['lang']][item['category']].append(item)
+        t = item['category'].split(',')
+        for i in t:
+            if i not in temp[item['lang']].keys():
+                temp[item['lang']][i] = [item]
+            else:
+                temp[item['lang']][i].append(item)
     for key in temp.keys():
         create_dir(f'docs/api/jokes/lang/{key}/category')
         for key2 in temp[key].keys():

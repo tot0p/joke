@@ -4,14 +4,14 @@
         "title" : "Jonathan",
         "content" : "Qu'est ce qui est jaune et qui attend ?\n\nJonathan",
         "author" : "tot0p",
-        "category" : "general"
+        "category" : "general,question"
     },
     {
         "lang" : "fr",
         "title" : "Le petit déjeuner",
         "content": "Tu connais l'histoire du petit déjeuner ? \n Non \n Pas de bol !",
         "author" : "tot0p",
-        "category" : "general"
+        "category" : "general,question"
     },
     {
         "lang" : "en",
