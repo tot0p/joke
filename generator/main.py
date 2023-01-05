@@ -50,8 +50,7 @@ if __name__ == '__main__':
     
     os.system('git config --local user.email "github-actions[bot]@users.noreply.github.com"')
     os.system('git config --local user.name "github-actions[bot]"')
-    os.system('git add api')
-    os.system('git add api/*')
+    os.system('git checkout api api/*')
     os.system('git commit -m "api update"')
-    os.system('git push origin/api')    
+    os.system('git push')    
 
