@@ -19,4 +19,4 @@ if you want to get joke, you can [use this api](https://tot0p.github.io/joke/) a
 
 Thanks to all the people who already contributed!
 
-[![](https://contributors-img.web.app/image?repo=tot0p/joke)](https://github.com/roadrunner-server/roadrunner/graphs/contributors)
+[![](https://contributors-img.web.app/image?repo=tot0p/joke)](https://github.com/tot0p/joke/graphs/contributors)
