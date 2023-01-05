@@ -13,7 +13,6 @@ if you want to get joke, you can [use this api](https://tot0p.github.io/joke/) a
 3. make pull request
 
 
-## coloborator
 
 # Thanks
 
