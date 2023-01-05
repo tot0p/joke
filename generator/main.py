@@ -42,9 +42,9 @@ def create_By_lang(data: list):
         else:
             temp[item['lang']].append(item)
     for key in temp.keys():
-        create_dir('docs/api/joke/lang')
-        create_dir(f'docs/api/joke/lang/{key}')
-        write_file(f'docs/api/joke/lang/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
+        create_dir('docs/api/jokes/lang')
+        create_dir(f'docs/api/jokes/lang/{key}')
+        write_file(f'docs/api/jokes/lang/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
 
 def create_By_author(data: list):
     temp = {}
@@ -54,9 +54,9 @@ def create_By_author(data: list):
         else:
             temp[item['author']].append(item)
     for key in temp.keys():
-        create_dir('docs/api/joke/author')
-        create_dir(f'docs/api/joke/author/{key}')
-        write_file(f'docs/api/joke/author/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
+        create_dir('docs/api/jokes/author')
+        create_dir(f'docs/api/jokes/author/{key}')
+        write_file(f'docs/api/jokes/author/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
 
 
 def create_By_category(data: list):
@@ -67,9 +67,9 @@ def create_By_category(data: list):
         else:
             temp[item['category']].append(item)
     for key in temp.keys():
-        create_dir('docs/api/joke/category')
-        create_dir(f'docs/api/joke/category/{key}')
-        write_file(f'docs/api/joke/category/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
+        create_dir('docs/api/jokes/category')
+        create_dir(f'docs/api/jokes/category/{key}')
+        write_file(f'docs/api/jokes/category/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
 
 def create_dir(dir_name: str):
     if not os.path.exists(dir_name):
