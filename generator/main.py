@@ -11,6 +11,7 @@ def main():
     create_All(data)
     create_By_lang(data)
     create_By_author(data)
+    create_By_category(data)
 
 
 def create_All(data: list):
