@@ -11,6 +11,5 @@ if you want to get joke, you can use this api and you can add your own joke with
 
 3. make pull request
 
-## doc of api is [here]()
+## doc of api is [here](/doc)
 
-or [here]()
