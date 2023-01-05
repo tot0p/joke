@@ -4,5 +4,11 @@
         "title" : "title of joke",
         "content" : "content of joke",
         "author" : "author of joke"
+    },
+    {
+        "lang" : "en",
+        "title" : "title of joke",
+        "content" : "content of joke",
+        "author" : "author of joke"
     }
 ]
