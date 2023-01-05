@@ -17,6 +17,7 @@ def main() :
             for lang in os.listdir('docs/api/jokes/lang'):
                 with open(f'docs/api/jokes/lang/{lang}/index.json', 'r', encoding='utf-8') as f:
                     data = json.load(f)
+                    create_dir('docs/api/joke/random/lang')
                     create_dir(f'docs/api/joke/random/lang/{lang}')
                     write_file(f'docs/api/joke/random/lang/{lang}/index.json', json.dumps(data[randint(0,len(data)-1)], ensure_ascii=False, indent=4))
             
