@@ -6,29 +6,39 @@ def main():
         data = json.load(f)
         for item in range(len(data)):
             data[item]['id'] = item
+    rm_dirRecursive('docs/api')
     create_dir('docs/api')
+    create_dir('docs/api/joke')
     create_By_Id(data)
     create_All(data)
     create_By_lang(data)
     create_By_author(data)
     create_By_category(data)
 
+def rm_dirRecursive(dir_name: str):
+    for root, dirs, files in os.walk(dir_name, topdown=False):
+        for name in files:
+            os.remove(os.path.join(root, name))
+        for name in dirs:
+            os.rmdir(os.path.join(root, name))
+    os.rmdir(dir_name)
+
 
 def create_All(data: list):
-    create_dir('docs/api/items')
-    write_file('docs/api/items/index.json', json.dumps(data, ensure_ascii=False, indent=4))
+    create_dir('docs/api/jokes')
+    write_file('docs/api/jokes/index.json', json.dumps(data, ensure_ascii=False, indent=4))
 
 def create_By_Id(data: list):
     for item in data:
-        create_dir('docs/api/id')
-        create_dir(f'docs/api/id/{item["id"]}')
-        write_file(f'docs/api/id/{item["id"]}/index.json', json.dumps(item, ensure_ascii=False, indent=4))
+        create_dir('docs/api/joke/id')
+        create_dir(f'docs/api/joke/id/{item["id"]}')
+        write_file(f'docs/api/joke/id/{item["id"]}/index.json', json.dumps(item, ensure_ascii=False, indent=4))
 
 def create_By_lang(data: list):
     for item in data:
-        create_dir('docs/api/lang')
-        create_dir(f'docs/api/lang/{item["lang"]}')
-        write_file(f'docs/api/lang/{item["lang"]}/index.json', json.dumps(item, ensure_ascii=False, indent=4))
+        create_dir('docs/api/joke/lang')
+        create_dir(f'docs/api/joke/lang/{item["lang"]}')
+        write_file(f'docs/api/joke/lang/{item["lang"]}/index.json', json.dumps(item, ensure_ascii=False, indent=4))
 
 def create_By_author(data: list):
     temp = {}
@@ -38,9 +48,9 @@ def create_By_author(data: list):
         else:
             temp[item['author']].append(item)
     for key in temp.keys():
-        create_dir('docs/api/author')
-        create_dir(f'docs/api/author/{key}')
-        write_file(f'docs/api/author/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
+        create_dir('docs/api/joke/author')
+        create_dir(f'docs/api/joke/author/{key}')
+        write_file(f'docs/api/joke/author/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
 
 
 def create_By_category(data: list):
@@ -51,9 +61,9 @@ def create_By_category(data: list):
         else:
             temp[item['category']].append(item)
     for key in temp.keys():
-        create_dir('docs/api/category')
-        create_dir(f'docs/api/category/{key}')
-        write_file(f'docs/api/category/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
+        create_dir('docs/api/joke/category')
+        create_dir(f'docs/api/joke/category/{key}')
+        write_file(f'docs/api/joke/category/{key}/index.json', json.dumps(temp[key], ensure_ascii=False, indent=4))
 
 def create_dir(dir_name: str):
     if not os.path.exists(dir_name):
