@@ -1,8 +1,8 @@
 {
     "lang": "fr",
-    "title": "Jonathan",
-    "content": "Qu'est ce qui est jaune et qui attend ?\n\nJonathan",
+    "title": "Le petit déjeuner",
+    "content": "Tu connais l'histoire du petit déjeuner ? \n Non \n Pas de bol !",
     "author": "tot0p",
-    "category": "general",
-    "id": 0
+    "category": "general,question",
+    "id": 1
 }
