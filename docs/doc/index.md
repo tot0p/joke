@@ -18,7 +18,7 @@
 
 /api/jokes/category/:category
 
-[try](../api/jokes/category/questions)
+[try](../api/jokes/category/question)
 
 ## get jokes by language
 
@@ -30,7 +30,7 @@
 
 /api/jokes/lang/:language/category/:category
 
-[try](../api/jokes/lang/fr/category/questions)
+[try](../api/jokes/lang/fr/category/question)
 
 ## get jokes by author
 
