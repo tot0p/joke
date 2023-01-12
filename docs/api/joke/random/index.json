@@ -1,8 +1,8 @@
 {
-    "lang": "en",
-    "title": "Peter",
-    "content": "Peter, do you think I am a bad mother? » -Well, my name is Andrew",
+    "lang": "fr",
+    "title": "Jonathan",
+    "content": "Qu'est ce qui est jaune et qui attend ?\n\nJonathan",
     "author": "tot0p",
-    "category": "general",
-    "id": 2
+    "category": "general,question",
+    "id": 0
 }
